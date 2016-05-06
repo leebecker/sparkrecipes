@@ -22,7 +22,9 @@ val percentColumns = foods.map{ food =>
 
 // The fold left initializes the accumulator with the foodCounts dataframe
 // with a total column. The foldLeft has repeated withColumns
-percentColumns.foldLeft(foodCounts.withColumn("total", rowTotal))((b, a) => b.withColumn(a._1, a._2)).show
+percentColumns.
+    foldLeft(foodCounts.withColumn("total", rowTotal))
+    ((b, a) => b.withColumn(a._1, a._2)).show
 
 }
 ```

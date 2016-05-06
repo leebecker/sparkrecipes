@@ -35,3 +35,8 @@ jupyter toree install \
     --spark_opts='--master=local[4]' \
     --interpreters=PySpark,SQL,Scala
 ```
+
+### Adding Jars to Jupyter ###
+```
+%AddJar -f file:/path/to/jar
+```
